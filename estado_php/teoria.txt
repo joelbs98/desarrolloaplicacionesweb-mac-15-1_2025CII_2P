@@ -1,0 +1,59 @@
+HTTP es un protocolo sin memoria
+A este problema se lo conoce como manejo de estado
+❓ ¿QUÉ ES “MANEJO DE ESTADO”?
+Es la forma de recordar información del usuario entre páginas.
+
+🟢 1️⃣ COOKIES
+Una cookie es un pequeño dato que el servidor guarda 
+en el navegador del usuario.
+📌 La cookie:
+se guarda en el navegador
+tiene nombre y valor
+puede durar minutos, horas o días
+
+SERVIDOR ──► guarda cookie ──► NAVEGADOR
+NAVEGADOR ──► envía cookie ──► SERVIDOR
+👉 El navegador la envía automáticamente en cada petición.
+Una cookie es información que el servidor almacena en el navegador
+del usuario para recordar datos entre páginas.
+
+🟡 2️⃣ SESIONES
+Una sesión es información que el servidor guarda sobre el usuario
+mientras navega por el sitio.
+📌 A diferencia de la cookie:
+la información NO se guarda en el navegador
+se guarda en el servidor
+
+🧭 ¿CÓMO FUNCIONA UNA SESIÓN? (RECORRIDO)
+SERVIDOR ──► crea sesión ──► ID
+NAVEGADOR ──► guarda ID ──► cookie
+NAVEGADOR ──► envía ID ──► SERVIDOR
+👉 El navegador solo guarda un identificador, no los datos.
+
+🧩 EJEMPLO CONCEPTUAL (SIN CÓDIGO)
+
+El servidor dice:
+“Este usuario es Angie”
+Guarda eso en el servidor y le da al navegador:
+“Tu número es 12345”
+Luego el navegador vuelve y dice:
+“Soy el usuario 12345”
+Y el servidor responde:
+“Ah, eres Angie”
+
+⚠️ IMPORTANTE SOBRE SESIONES
+✔ Más seguras que las cookies
+✔ Información privada
+❌ Se pierden al cerrar el navegador (por defecto)
+
+Una sesión permite almacenar información del usuario
+en el servidor durante su navegación.
+
+Cookies	                        Sesiones
+Se guardan en el navegador	Se guardan en el servidor
+Se leen con $_COOKIE	    Se leen con $_SESSION
+Menos seguras	            Más seguras
+Persisten	                Temporales
+
+Las cookies recuerdan información en el navegador,
+las sesiones recuerdan información en el servidor.
