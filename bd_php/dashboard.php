@@ -35,6 +35,7 @@ $usuario = $_SESSION["usuario"];
 
     <p>Si estas aqui, significa que la sesión esta activa</p>
 
+    <a href="usuarios.php">Ver usuarios</a>
     <a href="logout.php">Cerrar sesión</a>
 
 </body>
